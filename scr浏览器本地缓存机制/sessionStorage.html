@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        关闭浏览器就会清除
+     -->
+</head>
+<body>
+    <button onclick="addSession()">添加数据</button>
+    <button onclick="getSession()">读取数据</button>
+    <button onclick="deleteSession()">删除数据</button>
+    <button onclick="clearSession()">清空数据</button>
+    
+</body>
+<script>
+    function addSession(){
+        sessionStorage.setItem('msg','hello')
+    }
+    function getSession(){
+        console.log(sessionStorage.getItem('msg'))
+    }
+    function deleteSession(){
+        sessionStorage.removeItem('msg')
+    }
+    function clearSession(){
+        sessionStorage.clear()
+    }
+</script>
+</html>

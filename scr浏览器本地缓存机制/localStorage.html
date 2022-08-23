@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        浏览器本地缓存，想要清除缓存只能有两种方式：1、清除浏览器缓存，2、手动删除
+        关闭浏览器也不会清除
+     -->
+</head>
+<body>
+    <button onclick="addlocal()">添加数据</button>
+    <button onclick="getlocal()">读取数据</button>
+    <button onclick="deletelocal()">删除数据</button>
+    <button onclick="clearlocal()">清空数据</button>
+    
+</body>
+<script>
+    function addlocal(){
+        localStorage.setItem('msg','hello')
+    }
+    function getlocal(){
+        console.log(localStorage.getItem('msg'))
+    }
+    function deletelocal(){
+        localStorage.removeItem('msg')
+    }
+    function clearlocal(){
+        localStorage.clear()
+    }
+</script>
+</html>
